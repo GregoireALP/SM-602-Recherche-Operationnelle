@@ -23,7 +23,7 @@ def main():
             if problem_num < 1 or problem_num > 10:
                 raise ValueError
                 
-            filename = f"test.txt"
+            filename = f"test{problem_num}.txt"
             graph_type, n, capacities, costs = read_graph_file(filename)
             
             if choice == "1":
