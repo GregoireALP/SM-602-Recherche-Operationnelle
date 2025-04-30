@@ -3,6 +3,7 @@ from file_parser import read_graph_file
 from ford_fulkerson import ford_fulkerson
 from push_relabel import push_relabel
 from min_cost_flow import min_cost_flow
+from utils import print_flow_matrix
 
 def main():
     print("Projet de Recherche Opérationnelle - Problèmes de Flot")
@@ -63,20 +64,6 @@ def main():
             print("Fichier non trouvé. Veuillez vérifier le numéro du problème.")
         except Exception as e:
             print(f"Une erreur est survenue: {str(e)}")
-
-def print_flow_matrix(flow_matrix, capacities):
-    n = len(flow_matrix)
-    # En-tête
-    print("   " + " ".join(f"{i:5}" for i in range(n)))
-    # Lignes
-    for i in range(n):
-        print(f"{i:2} ", end="")
-        for j in range(n):
-            if capacities[i][j] > 0:
-                print(f"{flow_matrix[i][j]:2}/{capacities[i][j]:<3}", end=" ")
-            else:
-                print("  0    ", end=" ")
-        print()
 
 if __name__ == "__main__":
     main()

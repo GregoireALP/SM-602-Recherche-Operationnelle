@@ -1,22 +1,4 @@
-from collections import deque
-
-def bfs(residual_graph, n, s, t, parent):
-    visited = [False] * n
-    queue = deque()
-    queue.append(s)
-    visited[s] = True
-    
-    while queue:
-        u = queue.popleft()
-        
-        for v in range(n):
-            if not visited[v] and residual_graph[u][v] > 0:
-                queue.append(v)
-                visited[v] = True
-                parent[v] = u
-                if v == t:
-                    return True
-    return False
+from utils import bfs, print_flow_matrix
 
 def ford_fulkerson(n, capacities):
     # Initialisation
@@ -24,20 +6,32 @@ def ford_fulkerson(n, capacities):
     flow_matrix = [[0] * n for _ in range(n)]
     max_flow = 0
     s, t = 0, n-1  # Source et puits
+    iteration = 0
     
-    parent = [-1] * n
+    print("=== Initialisation ===")
     
-    # Algorithme principal
-    while bfs(residual_graph, n, s, t, parent):
-        # Trouver la capacité résiduelle minimale
+    while True:
+        iteration += 1
+        parent = [-1] * n
+        if not bfs(residual_graph, n, s, t, parent):
+            break
+            
+        # Trouver le chemin et le flot maximal
         path_flow = float("inf")
+        path = []
         v = t
         while v != s:
             u = parent[v]
             path_flow = min(path_flow, residual_graph[u][v])
+            path.append((u, v))
             v = u
+        path.reverse()  # Pour afficher de la source au puits
         
-        # Mettre à jour les flots et capacités résiduelles
+        print(f"\n=== Itération {iteration} ===")
+        print(f"Chemin améliorant: {' -> '.join(f'{u}->{v}' for u,v in path)}")
+        print(f"Flot pouvant être ajouté: {path_flow}")
+        
+        # Mise à jour des flots
         v = t
         while v != s:
             u = parent[v]
@@ -47,5 +41,14 @@ def ford_fulkerson(n, capacities):
             v = u
         
         max_flow += path_flow
+        
+        print("\nMatrice de flot actuelle:")
+        print_flow_matrix(flow_matrix, capacities)
+        
+    
+    print(f"\n=== Résultat final ===")
+    print(f"Flot maximal: {max_flow}")
+    print("Matrice de flot finale:")
+    print_flow_matrix(flow_matrix, capacities)
     
     return max_flow, flow_matrix

@@ -1,27 +1,47 @@
-# utils.py
+from collections import deque
 
-import numpy as np
-
-import numpy as np
-
-def lire_fichier_sans_capacite(nom_fichier):
-    """
-    Lit un fichier contenant uniquement une matrice de capacités (sans ligne indiquant n).
-    Renvoie la matrice sous forme de tableau numpy.
-    """
-    with open(nom_fichier, 'r') as f:
-        lignes = [ligne.strip() for ligne in f if ligne.strip()]
+def print_flow_matrix(flow_matrix, capacities):
+    n = len(flow_matrix)
     
-    matrice = [list(map(int, ligne.split())) for ligne in lignes]
-    return np.array(matrice)
+    # Calculer les largeurs maximales nécessaires pour chaque colonne
+    max_widths = [5] * n  # Largeur minimale par défaut
     
-def afficher_capacites(mat):
-    n = mat.shape[0]
-    print(f"{n}")
-    for ligne in mat:
-        print(" ".join(f"{val:3d}" for val in ligne))
-
-def afficher_couts(mat):
-    n = mat.shape[0]
-    for ligne in mat:
-        print(" ".join(f"{val:3d}" for val in ligne))
+    for j in range(n):
+        for i in range(n):
+            if capacities[i][j] > 0:
+                cell_content = f"{flow_matrix[i][j]}/{capacities[i][j]}"
+                max_widths[j] = max(max_widths[j], len(cell_content))
+    
+    # Afficher l'en-tête
+    header = "   " + " ".join(f"{i:^{max_widths[j]}}" for j, i in enumerate(range(n)))
+    print(header)
+    
+    # Afficher les lignes de données
+    for i in range(n):
+        row_str = f"{i:2} "
+        for j in range(n):
+            if capacities[i][j] > 0:
+                cell_content = f"{flow_matrix[i][j]}/{capacities[i][j]}"
+                row_str += f"{cell_content:^{max_widths[j]}} "
+            else:
+                row_str += f"{'0':^{max_widths[j]}} "
+        print(row_str)
+        
+        
+def bfs(residual_graph, n, s, t, parent):
+    visited = [False] * n
+    queue = deque()
+    queue.append(s)
+    visited[s] = True
+    
+    while queue:
+        u = queue.popleft()
+        
+        for v in range(n):
+            if not visited[v] and residual_graph[u][v] > 0:
+                queue.append(v)
+                visited[v] = True
+                parent[v] = u
+                if v == t:
+                    return True
+    return False
