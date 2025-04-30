@@ -1,39 +1,82 @@
-from arete import Arete
-from sommet import Sommet
-from graph import Graph
+import sys
+from file_parser import read_graph_file
+from ford_fulkerson import ford_fulkerson
+from push_relabel import push_relabel
+from min_cost_flow import min_cost_flow
 
-def get_graph_object_from_text(path):
-    sommets = []
-    aretes = []
+def main():
+    print("Projet de Recherche Opérationnelle - Problèmes de Flot")
+    
+    while True:
+        print("\nMenu principal:")
+        print("1. Résoudre un problème de flot maximal")
+        print("2. Résoudre un problème de flot à coût minimal")
+        print("3. Quitter")
+        
+        choice = input("Choix: ")
+        
+        if choice == "3":
+            break
+            
+        try:
+            problem_num = int(input("Numéro du problème (1-10): "))
+            if problem_num < 1 or problem_num > 10:
+                raise ValueError
+                
+            filename = f"test.txt"
+            graph_type, n, capacities, costs = read_graph_file(filename)
+            
+            if choice == "1":
+                print("\nAlgorithmes pour flot maximal:")
+                print("1. Ford-Fulkerson")
+                print("2. Pousser-Réétiqueter")
+                algo_choice = input("Choix: ")
+                
+                if algo_choice == "1":
+                    max_flow, flow_matrix = ford_fulkerson(n, capacities)
+                    print(f"\nFlot maximal: {max_flow}")
+                    print("Matrice de flot:")
+                    print_flow_matrix(flow_matrix, capacities)
+                elif algo_choice == "2":
+                    max_flow, flow_matrix = push_relabel(n, capacities)
+                    print(f"\nFlot maximal: {max_flow}")
+                    print("Matrice de flot:")
+                    print_flow_matrix(flow_matrix, capacities)
+                    
+            elif choice == "2":
+                if graph_type != "min_cost":
+                    print("Ce problème n'a pas de coûts associés.")
+                    continue
+                    
+                max_flow, _ = ford_fulkerson(n, capacities)
+                target_flow = max_flow // 2
+                print(f"\nCalcul du flot à coût minimal pour une valeur de {target_flow}")
+                
+                total_cost, flow_matrix = min_cost_flow(n, capacities, costs, target_flow)
+                print(f"Coût total: {total_cost}")
+                print("Matrice de flot:")
+                print_flow_matrix(flow_matrix, capacities)
+                
+        except ValueError:
+            print("Entrée invalide. Veuillez réessayer.")
+        except FileNotFoundError:
+            print("Fichier non trouvé. Veuillez vérifier le numéro du problème.")
+        except Exception as e:
+            print(f"Une erreur est survenue: {str(e)}")
 
-    # Lire le fichier et construire la matrice d'adjacence
-    with open(path, 'r') as fichier:
-        matrice = [list(map(int, ligne.split())) for ligne in fichier.readlines()]
+def print_flow_matrix(flow_matrix, capacities):
+    n = len(flow_matrix)
+    # En-tête
+    print("   " + " ".join(f"{i:5}" for i in range(n)))
+    # Lignes
+    for i in range(n):
+        print(f"{i:2} ", end="")
+        for j in range(n):
+            if capacities[i][j] > 0:
+                print(f"{flow_matrix[i][j]:2}/{capacities[i][j]:<3}", end=" ")
+            else:
+                print("  0    ", end=" ")
+        print()
 
-    # Créer les sommets
-    for i in range(len(matrice)):
-        if i == 0:
-            sommets.append(Sommet(etiquette="s", rentrant=[], sortant=[]))
-        elif i == len(matrice) - 1:
-            sommets.append(Sommet(etiquette="t", rentrant=[], sortant=[]))
-        else:
-            sommets.append(Sommet(etiquette=i, rentrant=[], sortant=[]))
-
-    # Créer les arêtes à partir de la matrice d'adjacence
-    for i, ligne in enumerate(matrice):
-        for j, valeur in enumerate(ligne):
-            if valeur > 0:  # Si une connexion existe
-                arete = Arete(origine=sommets[i], destination=sommets[j], capacite=valeur, cout=0)
-                aretes.append(arete)
-                sommets[i].sortant.append(arete)
-                sommets[j].rentrant.append(arete)
-
-    # Créer et retourner l'objet Graph
-    return Graph(aretes=aretes, sommets=sommets)
-
-# Exemple d'utilisation
-graph = get_graph_object_from_text('assets/model/test.txt')
-parcours = graph.parcoursEnLargeur()
-for sommet in parcours:
-    print(sommet.etiquette, end=" ")
-print("\n")
+if __name__ == "__main__":
+    main()
