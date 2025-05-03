@@ -1,24 +1,29 @@
-Trace d'ex�cution pour Ford-Fulkerson - Instance 4
-Groupe I - �quipe 4 - Probl�me 4
-Algorithme : Ford-Fulkerson
-Instance : 4
-=== D�but de la trace ===
 === Initialisation ===
-Début de la recherche BFS depuis le sommet 0
-Visite du sommet 0
-Successeurs accessibles depuis 0 : [1, 3]
-Visite du sommet 1
-Successeurs accessibles depuis 1 : [2]
-Visite du sommet 3
-Successeurs accessibles depuis 3 : [5, 6]
-Visite du sommet 2
-Successeurs accessibles depuis 2 : [4]
-Visite du sommet 5
-Chemin trouvé jusqu'au puits 7
-
-=== Itération 1 ===
+Matrice de capacité initiale:
+     0     1     2     3     4     5     6     7
+ 0   0    0/5    0    0/9    0     0     0     0
+ 1   0     0    0/7    0     0     0     0     0
+ 2   0     0     0     0    0/4   0/3    0     0
+ 3   0     0    0/4    0     0    0/6   0/5    0
+ 4   0     0     0     0     0    0/6    0    0/6
+ 5   0     0     0     0     0     0     0    0/5
+ 6   0     0     0     0     0     0     0    0/7
+ 7   0     0     0     0     0     0     0     0
+[*] Parcours en largeur à partir de la source:
+    - Visite du sommet 0:
+        ->Successeurs accessibles depuis 0 : [1, 3]
+    - Visite du sommet 1:
+        ->Successeurs accessibles depuis 1 : [2]
+    - Visite du sommet 3:
+        ->Successeurs accessibles depuis 3 : [5, 6]
+    - Visite du sommet 2:
+        ->Successeurs accessibles depuis 2 : [4]
+    - Visite du sommet 5:
+[*]Chemin améliorant trouvé
 Chemin améliorant: 0->3 -> 3->5 -> 5->7
 Flot pouvant être ajouté: 5
+
+=== Itération 1 ===
 
 Matrice de flot actuelle:
      0     1     2     3     4     5     6     7
@@ -30,23 +35,23 @@ Matrice de flot actuelle:
  5   0     0     0     0     0     0     0    5/5
  6   0     0     0     0     0     0     0    0/7
  7   0     0     0     0     0     0     0     0
-Début de la recherche BFS depuis le sommet 0
-Visite du sommet 0
-Successeurs accessibles depuis 0 : [1, 3]
-Visite du sommet 1
-Successeurs accessibles depuis 1 : [2]
-Visite du sommet 3
-Successeurs accessibles depuis 3 : [5, 6]
-Visite du sommet 2
-Successeurs accessibles depuis 2 : [4]
-Visite du sommet 5
-Successeurs accessibles depuis 5 : []
-Visite du sommet 6
-Chemin trouvé jusqu'au puits 7
-
-=== Itération 2 ===
+[*] Parcours en largeur à partir de la source:
+    - Visite du sommet 0:
+        ->Successeurs accessibles depuis 0 : [1, 3]
+    - Visite du sommet 1:
+        ->Successeurs accessibles depuis 1 : [2]
+    - Visite du sommet 3:
+        ->Successeurs accessibles depuis 3 : [5, 6]
+    - Visite du sommet 2:
+        ->Successeurs accessibles depuis 2 : [4]
+    - Visite du sommet 5:
+        ->Successeurs accessibles depuis 5 : []
+    - Visite du sommet 6:
+[*]Chemin améliorant trouvé
 Chemin améliorant: 0->3 -> 3->6 -> 6->7
 Flot pouvant être ajouté: 4
+
+=== Itération 2 ===
 
 Matrice de flot actuelle:
      0     1     2     3     4     5     6     7
@@ -58,19 +63,19 @@ Matrice de flot actuelle:
  5   0     0     0     0     0     0     0    5/5
  6   0     0     0     0     0     0     0    4/7
  7   0     0     0     0     0     0     0     0
-Début de la recherche BFS depuis le sommet 0
-Visite du sommet 0
-Successeurs accessibles depuis 0 : [1]
-Visite du sommet 1
-Successeurs accessibles depuis 1 : [2]
-Visite du sommet 2
-Successeurs accessibles depuis 2 : [4, 5]
-Visite du sommet 4
-Chemin trouvé jusqu'au puits 7
-
-=== Itération 3 ===
+[*] Parcours en largeur à partir de la source:
+    - Visite du sommet 0:
+        ->Successeurs accessibles depuis 0 : [1]
+    - Visite du sommet 1:
+        ->Successeurs accessibles depuis 1 : [2]
+    - Visite du sommet 2:
+        ->Successeurs accessibles depuis 2 : [4, 5]
+    - Visite du sommet 4:
+[*]Chemin améliorant trouvé
 Chemin améliorant: 0->1 -> 1->2 -> 2->4 -> 4->7
 Flot pouvant être ajouté: 4
+
+=== Itération 3 ===
 
 Matrice de flot actuelle:
      0     1     2     3     4     5     6     7
@@ -82,23 +87,23 @@ Matrice de flot actuelle:
  5   0     0     0     0     0     0     0    5/5
  6   0     0     0     0     0     0     0    4/7
  7   0     0     0     0     0     0     0     0
-Début de la recherche BFS depuis le sommet 0
-Visite du sommet 0
-Successeurs accessibles depuis 0 : [1]
-Visite du sommet 1
-Successeurs accessibles depuis 1 : [2]
-Visite du sommet 2
-Successeurs accessibles depuis 2 : [5]
-Visite du sommet 5
-Successeurs accessibles depuis 5 : [3]
-Visite du sommet 3
-Successeurs accessibles depuis 3 : [6]
-Visite du sommet 6
-Chemin trouvé jusqu'au puits 7
-
-=== Itération 4 ===
+[*] Parcours en largeur à partir de la source:
+    - Visite du sommet 0:
+        ->Successeurs accessibles depuis 0 : [1]
+    - Visite du sommet 1:
+        ->Successeurs accessibles depuis 1 : [2]
+    - Visite du sommet 2:
+        ->Successeurs accessibles depuis 2 : [5]
+    - Visite du sommet 5:
+        ->Successeurs accessibles depuis 5 : [3]
+    - Visite du sommet 3:
+        ->Successeurs accessibles depuis 3 : [6]
+    - Visite du sommet 6:
+[*]Chemin améliorant trouvé
 Chemin améliorant: 0->1 -> 1->2 -> 2->5 -> 5->3 -> 3->6 -> 6->7
 Flot pouvant être ajouté: 1
+
+=== Itération 4 ===
 
 Matrice de flot actuelle:
      0     1     2     3     4     5     6     7
@@ -110,23 +115,11 @@ Matrice de flot actuelle:
  5   0     0     0     0     0     0     0    5/5
  6   0     0     0     0     0     0     0    5/7
  7   0     0     0     0     0     0     0     0
-Début de la recherche BFS depuis le sommet 0
-Visite du sommet 0
-Successeurs accessibles depuis 0 : []
-Aucun chemin augmentant trouvé
-
-=== Résultat final ===
-Flot maximal: 14
-Matrice de flot finale:
-     0     1     2     3     4     5     6     7
- 0   0    5/5    0    9/9    0     0     0     0
- 1   0     0    5/7    0     0     0     0     0
- 2   0     0     0     0    4/4   1/3    0     0
- 3   0     0    0/4    0     0    5/6   5/5    0
- 4   0     0     0     0     0    0/6    0    4/6
- 5   0     0     0     0     0     0     0    5/5
- 6   0     0     0     0     0     0     0    5/7
- 7   0     0     0     0     0     0     0     0
+[*] Parcours en largeur à partir de la source:
+    - Visite du sommet 0:
+        ->Successeurs accessibles depuis 0 : []
+[*] Aucun chemin augmentant trouvé
+=== Résultat de Ford-Fulkerson ===
 
 Flot maximal: 14
 Matrice de flot:
@@ -139,4 +132,3 @@ Matrice de flot:
  5   0     0     0     0     0     0     0    5/5
  6   0     0     0     0     0     0     0    5/7
  7   0     0     0     0     0     0     0     0
-=== Fin de la trace ===
