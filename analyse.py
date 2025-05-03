@@ -19,8 +19,8 @@ def generate_random_graph(n):
     return capacities, costs
 
 def analyze_complexity():
-    sizes = [10, 20, 40, 100, 400, 1000]
-    num_trials = 100
+    sizes = [10, 20, 40, 100]
+    num_trials = 10
     
     results = {
         'FF': {size: [] for size in sizes},
@@ -44,30 +44,37 @@ def analyze_complexity():
             results['PR'][size].append(time.time() - start)
             
             
-            # TODO : Min-Cost Flow
+            # Min-Cost Flow
+            start = time.time()
+            min_cost_flow(size, capacities, costs, size)
+            results['MIN'][size].append(time.time() - start)
     
     # Affichage des résultats
     plot_results(results)
 
 def plot_results(results):
-    plt.figure(figsize=(12, 6))
-    
-    for algo in ['FF', 'PR', 'MIN']:
-        sizes = sorted(results[algo].keys())
-        avg_times = [sum(results[algo][size])/len(results[algo][size]) for size in sizes]
-        max_times = [max(results[algo][size]) for size in sizes]
+    sizes = results['FF'].keys()
+    for algo in results:
+        avg_times = [
+            sum(results[algo][size]) / len(results[algo][size]) if len(results[algo][size]) > 0 else 0
+            for size in sizes
+        ]
+        worst_times = [
+            max(results[algo][size]) if len(results[algo][size]) > 0 else 0
+            for size in sizes
+        ]
+        best_times = [
+            min(results[algo][size]) if len(results[algo][size]) > 0 else 0
+            for size in sizes
+        ]
         
         plt.plot(sizes, avg_times, label=f"{algo} (moyenne)")
-        plt.plot(sizes, max_times, '--', label=f"{algo} (pire cas)")
+        plt.plot(sizes, worst_times, '--', label=f"{algo} (pire cas)")
+        plt.plot(sizes, best_times, ':', label=f"{algo} (meilleur cas)")
     
-    plt.xlabel('Taille du graphe (n)')
-    plt.ylabel('Temps d\'exécution (s)')
-    plt.title('Analyse de complexité des algorithmes de flot')
+    plt.xlabel("Graph size")
+    plt.ylabel("Time (s)")
     plt.legend()
-    plt.grid(True)
-    plt.xscale('log')
-    plt.yscale('log')
-    plt.savefig('complexity_analysis.png')
     plt.show()
     
     
