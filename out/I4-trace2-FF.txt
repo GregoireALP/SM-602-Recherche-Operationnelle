@@ -1,7 +1,276 @@
-Trace d'ex�cution pour Ford-Fulkerson - Instance 2
-Groupe I - �quipe 4 - Probl�me 2
+Trace d'ex�cution pour Ford-Fulkerson - Instance 2
+Groupe I - �quipe 4 - Probl�me 2
 Algorithme : Ford-Fulkerson
 Instance : 2
-=== D�but de la trace ===
-... (contenu de la trace ici) ...
+=== D�but de la trace ===
+=== Initialisation ===
+Début de la recherche BFS depuis le sommet 0
+Visite du sommet 0
+Successeurs accessibles depuis 0 : [1, 2, 3]
+Visite du sommet 1
+Successeurs accessibles depuis 1 : [4, 5, 6]
+Visite du sommet 2
+Successeurs accessibles depuis 2 : []
+Visite du sommet 3
+Successeurs accessibles depuis 3 : [8]
+Visite du sommet 4
+Successeurs accessibles depuis 4 : [7]
+Visite du sommet 5
+Successeurs accessibles depuis 5 : []
+Visite du sommet 6
+Chemin trouvé jusqu'au puits 9
+
+=== Itération 1 ===
+Chemin améliorant: 0->1 -> 1->6 -> 6->9
+Flot pouvant être ajouté: 4
+
+Matrice de flot actuelle:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   4/16   0/3   0/8    0     0     0     0     0     0
+ 1   0     0    0/3    0    0/3   0/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    0/7    0
+ 4   0     0     0     0     0     0    0/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    4/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    0/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Début de la recherche BFS depuis le sommet 0
+Visite du sommet 0
+Successeurs accessibles depuis 0 : [1, 2, 3]
+Visite du sommet 1
+Successeurs accessibles depuis 1 : [4, 5]
+Visite du sommet 2
+Successeurs accessibles depuis 2 : []
+Visite du sommet 3
+Successeurs accessibles depuis 3 : [8]
+Visite du sommet 4
+Successeurs accessibles depuis 4 : [6, 7]
+Visite du sommet 5
+Successeurs accessibles depuis 5 : []
+Visite du sommet 8
+Chemin trouvé jusqu'au puits 9
+
+=== Itération 2 ===
+Chemin améliorant: 0->3 -> 3->8 -> 8->9
+Flot pouvant être ajouté: 7
+
+Matrice de flot actuelle:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   4/16   0/3   7/8    0     0     0     0     0     0
+ 1   0     0    0/3    0    0/3   0/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    0/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    4/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Début de la recherche BFS depuis le sommet 0
+Visite du sommet 0
+Successeurs accessibles depuis 0 : [1, 2, 3]
+Visite du sommet 1
+Successeurs accessibles depuis 1 : [4, 5]
+Visite du sommet 2
+Successeurs accessibles depuis 2 : []
+Visite du sommet 3
+Successeurs accessibles depuis 3 : []
+Visite du sommet 4
+Successeurs accessibles depuis 4 : [6, 7]
+Visite du sommet 5
+Successeurs accessibles depuis 5 : []
+Visite du sommet 6
+Chemin trouvé jusqu'au puits 9
+
+=== Itération 3 ===
+Chemin améliorant: 0->1 -> 1->4 -> 4->6 -> 6->9
+Flot pouvant être ajouté: 1
+
+Matrice de flot actuelle:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   5/16   0/3   7/8    0     0     0     0     0     0
+ 1   0     0    0/3    0    1/3   0/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    5/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Début de la recherche BFS depuis le sommet 0
+Visite du sommet 0
+Successeurs accessibles depuis 0 : [1, 2, 3]
+Visite du sommet 1
+Successeurs accessibles depuis 1 : [4, 5]
+Visite du sommet 2
+Successeurs accessibles depuis 2 : []
+Visite du sommet 3
+Successeurs accessibles depuis 3 : []
+Visite du sommet 4
+Successeurs accessibles depuis 4 : [7]
+Visite du sommet 5
+Successeurs accessibles depuis 5 : []
+Visite du sommet 7
+Chemin trouvé jusqu'au puits 9
+
+=== Itération 4 ===
+Chemin améliorant: 0->1 -> 1->4 -> 4->7 -> 7->9
+Flot pouvant être ajouté: 2
+
+Matrice de flot actuelle:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   7/16   0/3   7/8    0     0     0     0     0     0
+ 1   0     0    0/3    0    3/3   0/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   2/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    5/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   2/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Début de la recherche BFS depuis le sommet 0
+Visite du sommet 0
+Successeurs accessibles depuis 0 : [1, 2, 3]
+Visite du sommet 1
+Successeurs accessibles depuis 1 : [5]
+Visite du sommet 2
+Successeurs accessibles depuis 2 : []
+Visite du sommet 3
+Successeurs accessibles depuis 3 : []
+Visite du sommet 5
+Successeurs accessibles depuis 5 : [4]
+Visite du sommet 4
+Successeurs accessibles depuis 4 : [7]
+Visite du sommet 7
+Chemin trouvé jusqu'au puits 9
+
+=== Itération 5 ===
+Chemin améliorant: 0->1 -> 1->5 -> 5->4 -> 4->7 -> 7->9
+Flot pouvant être ajouté: 3
+
+Matrice de flot actuelle:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   10/16  0/3   7/8    0     0     0     0     0     0
+ 1   0     0    0/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   5/8    0     0
+ 5   0     0     0     0    3/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    5/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   5/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Début de la recherche BFS depuis le sommet 0
+Visite du sommet 0
+Successeurs accessibles depuis 0 : [1, 2, 3]
+Visite du sommet 1
+Successeurs accessibles depuis 1 : []
+Visite du sommet 2
+Successeurs accessibles depuis 2 : [5]
+Visite du sommet 3
+Successeurs accessibles depuis 3 : []
+Visite du sommet 5
+Successeurs accessibles depuis 5 : [4]
+Visite du sommet 4
+Successeurs accessibles depuis 4 : [7]
+Visite du sommet 7
+Chemin trouvé jusqu'au puits 9
+
+=== Itération 6 ===
+Chemin améliorant: 0->2 -> 2->5 -> 5->4 -> 4->7 -> 7->9
+Flot pouvant être ajouté: 1
+
+Matrice de flot actuelle:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   10/16  1/3   7/8    0     0     0     0     0     0
+ 1   0     0    0/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    1/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   6/8    0     0
+ 5   0     0     0     0    4/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    5/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   6/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Début de la recherche BFS depuis le sommet 0
+Visite du sommet 0
+Successeurs accessibles depuis 0 : [1, 2, 3]
+Visite du sommet 1
+Successeurs accessibles depuis 1 : []
+Visite du sommet 2
+Successeurs accessibles depuis 2 : [5]
+Visite du sommet 3
+Successeurs accessibles depuis 3 : []
+Visite du sommet 5
+Successeurs accessibles depuis 5 : [4]
+Visite du sommet 4
+Successeurs accessibles depuis 4 : [7]
+Visite du sommet 7
+Successeurs accessibles depuis 7 : [6, 8]
+Visite du sommet 6
+Chemin trouvé jusqu'au puits 9
+
+=== Itération 7 ===
+Chemin améliorant: 0->2 -> 2->5 -> 5->4 -> 4->7 -> 7->6 -> 6->9
+Flot pouvant être ajouté: 2
+
+Matrice de flot actuelle:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   10/16  3/3   7/8    0     0     0     0     0     0
+ 1   0     0    0/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    3/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   8/8    0     0
+ 5   0     0     0     0    6/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    7/8
+ 7   0     0     0     0     0     0    2/3    0    0/4   6/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Début de la recherche BFS depuis le sommet 0
+Visite du sommet 0
+Successeurs accessibles depuis 0 : [1, 3]
+Visite du sommet 1
+Successeurs accessibles depuis 1 : [2]
+Visite du sommet 3
+Successeurs accessibles depuis 3 : []
+Visite du sommet 2
+Successeurs accessibles depuis 2 : [5]
+Visite du sommet 5
+Successeurs accessibles depuis 5 : [4]
+Visite du sommet 4
+Successeurs accessibles depuis 4 : []
+Aucun chemin augmentant trouvé
+
+=== Résultat final ===
+Flot maximal: 20
+Matrice de flot finale:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   10/16  3/3   7/8    0     0     0     0     0     0
+ 1   0     0    0/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    3/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   8/8    0     0
+ 5   0     0     0     0    6/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    7/8
+ 7   0     0     0     0     0     0    2/3    0    0/4   6/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+
+Flot maximal: 20
+Matrice de flot:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   10/16  3/3   7/8    0     0     0     0     0     0
+ 1   0     0    0/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    3/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   8/8    0     0
+ 5   0     0     0     0    6/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    7/8
+ 7   0     0     0     0     0     0    2/3    0    0/4   6/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
 === Fin de la trace ===

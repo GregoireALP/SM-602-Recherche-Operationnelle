@@ -1,7 +1,201 @@
-Trace d'exécution pour flot à coût min - Instance 10
-Groupe I - Équipe 4 - Problème 10
-Algorithme : flot à coût min
+Trace d'exï¿½cution pour flot ï¿½ coï¿½t min - Instance 10
+Groupe I - ï¿½quipe 4 - Problï¿½me 10
+Algorithme : flot ï¿½ coï¿½t min
 Instance : 10
-=== Début de la trace ===
-... (contenu de la trace ici) ...
+=== Dï¿½but de la trace ===
+=== Initialisation ===
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 4
+Sommet 2: 4
+Sommet 3: 5
+Sommet 4: 7
+Sommet 5: 5
+     0     1     2     3     4     5
+ 0   0   0/15   0/8    0     0     0
+ 1   0     0   0/20   0/4  0/10    0
+ 2   0     0     0   0/15   0/4    0
+ 3   0     0     0     0   0/20   0/5
+ 4   0     0    0/5    0     0   0/15
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 4
+Sommet 2: 4
+Sommet 3: 5
+Sommet 4: 7
+Sommet 5: 7
+     0     1     2     3     4     5
+ 0   0   0/15   5/8    0     0     0
+ 1   0     0   0/20   0/4  0/10    0
+ 2   0     0     0   5/15   0/4    0
+ 3   0     0     0     0   0/20   5/5
+ 4   0     0    0/5    0     0   0/15
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 4
+Sommet 2: 6
+Sommet 3: 6
+Sommet 4: 8
+Sommet 5: 8
+     0     1     2     3     4     5
+ 0   0   0/15   8/8    0     0     0
+ 1   0     0   0/20   0/4  0/10    0
+ 2   0     0     0   5/15   3/4    0
+ 3   0     0     0     0   0/20   5/5
+ 4   0     0   -3/5    0     0   3/15
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 4
+Sommet 2: 6
+Sommet 3: 7
+Sommet 4: 9
+Sommet 5: 9
+     0     1     2     3     4     5
+ 0   0   4/15   8/8    0     0     0
+ 1   0     0   0/20   4/4  0/10    0
+ 2   0     0     0   5/15   3/4    0
+ 3   0     0     0     0   4/20   5/5
+ 4   0     0   -3/5    0     0   7/15
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 4
+Sommet 2: 6
+Sommet 3: 7
+Sommet 4: 9
+Sommet 5: 9
+     0     1     2     3     4     5
+ 0   0   5/15   8/8    0     0     0
+ 1   0     0   1/20   4/4  0/10    0
+ 2   0     0     0   5/15   4/4    0
+ 3   0     0     0     0   4/20   5/5
+ 4   0     0   -4/5    0     0   8/15
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 4
+Sommet 2: 6
+Sommet 3: 7
+Sommet 4: 9
+Sommet 5: inf
+     0     1     2     3     4     5
+ 0   0   12/15  8/8    0     0     0
+ 1   0     0   8/20   4/4  0/10    0
+ 2   0     0     0   12/15  4/4    0
+ 3   0     0     0     0   11/20  5/5
+ 4   0     0   -4/5    0     0   15/15
+ 5   0     0     0     0     0     0
+CoÃ»t total: 150
+Matrice de flot:
+     0     1     2     3     4     5
+ 0   0   12/15  8/8    0     0     0
+ 1   0     0   8/20   4/4  0/10    0
+ 2   0     0     0   12/15  4/4    0
+ 3   0     0     0     0   11/20  5/5
+ 4   0     0   -4/5    0     0   15/15
+ 5   0     0     0     0     0     0
+
+Menu principal:
+1. RÃ©soudre un problÃ¨me de flot maximal
+2. RÃ©soudre un problÃ¨me de flot Ã  coÃ»t minimal
+3. Analyser la complexitÃ©
+4. Quitter
+Choix: 2
+NumÃ©ro du problÃ¨me (1-10): 10
+ProblÃ¨me de coÃ»t minimal dÃ©tectÃ©.
+=== Initialisation ===
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 2
+Sommet 2: 3
+Sommet 3: 6
+Sommet 4: 3
+Sommet 5: 8
+Sommet 6: 6
+     0     1     2     3     4     5     6
+ 0   0   0/150 0/150   0     0     0     0
+ 1   0     0     0   0/120 0/100   0     0
+ 2   0     0     0     0   0/100 0/120   0
+ 3   0     0     0     0     0     0   0/150
+ 4   0     0     0   0/50    0     0   0/80
+ 5   0     0     0     0   0/50    0   0/150
+ 6   0     0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 2
+Sommet 2: 3
+Sommet 3: 6
+Sommet 4: 3
+Sommet 5: 8
+Sommet 6: 9
+     0     1      2     3     4      5     6
+ 0   0   80/150 0/150   0     0      0     0
+ 1   0     0      0   0/120 80/100   0     0
+ 2   0     0      0     0   0/100  0/120   0
+ 3   0     0      0     0     0      0   0/150
+ 4   0     0      0   0/50    0      0   80/80
+ 5   0     0      0     0    0/50    0   0/150
+ 6   0     0      0     0     0      0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 5
+Sommet 2: 3
+Sommet 3: 9
+Sommet 4: 5
+Sommet 5: 8
+Sommet 6: 12
+     0      1      2     3      4      5     6
+ 0   0   150/150 0/150   0      0      0     0
+ 1   0      0      0   70/120 80/100   0     0
+ 2   0      0      0     0    0/100  0/120   0
+ 3   0      0      0     0      0      0   70/150
+ 4   0      0      0    0/50    0      0   80/80
+ 5   0      0      0     0     0/50    0   0/150
+ 6   0      0      0     0      0      0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 5
+Sommet 2: 3
+Sommet 3: 9
+Sommet 4: 5
+Sommet 5: 12
+Sommet 6: 12
+     0      1       2      3      4       5       6
+ 0   0   150/150 120/150   0      0       0       0
+ 1   0      0       0    70/120 80/100    0       0
+ 2   0      0       0      0    0/100  120/120    0
+ 3   0      0       0      0      0       0    70/150
+ 4   0      0       0     0/50    0       0     80/80
+ 5   0      0       0      0     0/50     0    120/150
+ 6   0      0       0      0      0       0       0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: inf
+Sommet 2: inf
+Sommet 3: inf
+Sommet 4: inf
+Sommet 5: inf
+Sommet 6: inf
+     0      1       2       3      4       5       6
+ 0   0   150/150 150/150    0      0       0       0
+ 1   0      0       0    100/120 50/100    0       0
+ 2   0      0       0       0    30/100 120/120    0
+ 3   0      0       0       0      0       0    100/150
+ 4   0      0       0     0/50     0       0     80/80
+ 5   0      0       0       0     0/50     0    120/150
+ 6   0      0       0       0      0       0       0
+CoÃ»t total: 2910
+Matrice de flot:
+     0      1       2       3      4       5       6
+ 0   0   150/150 150/150    0      0       0       0
+ 1   0      0       0    100/120 50/100    0       0
+ 2   0      0       0       0    30/100 120/120    0
+ 3   0      0       0       0      0       0    100/150
+ 4   0      0       0     0/50     0       0     80/80
+ 5   0      0       0       0     0/50     0    120/150
+ 6   0      0       0       0      0       0       0
+
 === Fin de la trace ===

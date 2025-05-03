@@ -49,12 +49,8 @@ def main():
                 if graph_type != "min_cost":
                     print("Ce problème n'a pas de coûts associés.")
                     continue
-                    
-                max_flow, _ = ford_fulkerson(n, capacities)
-                target_flow = max_flow // 2
-                print(f"\nCalcul du flot à coût minimal pour une valeur de {target_flow}")
                 
-                total_cost, flow_matrix = min_cost_flow(n, capacities, costs, target_flow)
+                total_cost, flow_matrix = min_cost_flow(n, capacities, costs)
                 print(f"Coût total: {total_cost}")
                 print("Matrice de flot:")
                 print_flow_matrix(flow_matrix, capacities)

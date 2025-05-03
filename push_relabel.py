@@ -1,3 +1,5 @@
+from utils import print_flow_matrix
+
 def push_relabel(n, capacities):
     # Initialisation
     flow = [[0] * n for _ in range(n)]
@@ -6,6 +8,7 @@ def push_relabel(n, capacities):
     s, t = 0, n-1  # Source et puits
     
     height[s] = n
+    
     # Pré-flot
     for v in range(n):
         if capacities[s][v] > 0:
@@ -17,9 +20,11 @@ def push_relabel(n, capacities):
     # Liste des sommets actifs (sauf s et t)
     active_nodes = [i for i in range(n) if i != s and i != t and excess[i] > 0]
     
+    print("=== Initialisation ===")
+    
     while active_nodes:
         u = active_nodes[0]
-        pushed = False
+        pushed = False        
         
         # Essayer de pousser le flot
         for v in range(n):
@@ -35,6 +40,9 @@ def push_relabel(n, capacities):
                 if excess[u] == 0:
                     active_nodes.remove(u)
                     break
+                
+                print(f"Poussé {delta} unités de {u} vers {v}, flot actuel : {flow[u][v]}/{capacities[u][v]}")
+                print_flow_matrix(flow, capacities)
         
         if not pushed and excess[u] > 0:
             # Réétiqueter
@@ -43,6 +51,8 @@ def push_relabel(n, capacities):
                 if capacities[u][v] - flow[u][v] > 0:
                     min_height = min(min_height, height[v])
             height[u] = min_height + 1
+            print(f"Réétiquetage du sommet {u} avec nouvelle hauteur {height[u]}")
+            
     
     max_flow = sum(flow[s][v] for v in range(n) if flow[s][v] > 0)
     return max_flow, flow

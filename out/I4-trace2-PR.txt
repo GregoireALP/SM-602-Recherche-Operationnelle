@@ -1,7 +1,166 @@
-Trace d'ex�cution pour pousser-r��tiqueter - Instance 2
-Groupe I - �quipe 4 - Probl�me 2
-Algorithme : pousser-r��tiqueter
+Trace d'ex�cution pour pousser-r��tiqueter - Instance 2
+Groupe I - �quipe 4 - Probl�me 2
+Algorithme : pousser-r��tiqueter
 Instance : 2
-=== D�but de la trace ===
-... (contenu de la trace ici) ...
+=== D�but de la trace ===
+=== Initialisation ===
+Réétiquetage du sommet 1 avec nouvelle hauteur 1
+Poussé 3 unités de 1 vers 2, flot actuel : 3/3
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   16/16  3/3   8/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    0/3   0/3   0/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    0/7    0
+ 4   0     0     0     0     0     0    0/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    0/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    0/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Poussé 3 unités de 1 vers 4, flot actuel : 3/3
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   16/16  3/3   8/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    3/3   0/3   0/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    0/7    0
+ 4   0     0     0     0     0     0    0/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    0/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    0/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Poussé 3 unités de 1 vers 5, flot actuel : 3/3
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   16/16  3/3   8/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    3/3   3/3   0/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    0/7    0
+ 4   0     0     0     0     0     0    0/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    0/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    0/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Poussé 4 unités de 1 vers 6, flot actuel : 4/4
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   16/16  3/3   8/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    0/7    0
+ 4   0     0     0     0     0     0    0/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    0/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    0/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Réétiquetage du sommet 1 avec nouvelle hauteur 11
+Réétiquetage du sommet 2 avec nouvelle hauteur 1
+Réétiquetage du sommet 3 avec nouvelle hauteur 1
+Poussé 7 unités de 3 vers 8, flot actuel : 7/7
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   13/16  3/3   8/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    6/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    0/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    0/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    0/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Réétiquetage du sommet 3 avec nouvelle hauteur 2
+Poussé 6 unités de 3 vers 2, flot actuel : 0/0
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   13/16  3/3   8/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    0/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    0/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    0/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Réétiquetage du sommet 3 avec nouvelle hauteur 11
+Réétiquetage du sommet 4 avec nouvelle hauteur 1
+Poussé 1 unités de 4 vers 6, flot actuel : 1/1
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   13/16  3/3   7/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    0/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   0/8    0     0
+ 5   0     0     0     0    0/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    0/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    0/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Réétiquetage du sommet 5 avec nouvelle hauteur 2
+Réétiquetage du sommet 6 avec nouvelle hauteur 1
+Réétiquetage du sommet 8 avec nouvelle hauteur 1
+Réétiquetage du sommet 2 avec nouvelle hauteur 3
+Poussé 5 unités de 2 vers 5, flot actuel : 5/5
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   13/16  3/3   7/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    5/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   2/8    0     0
+ 5   0     0     0     0    3/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    5/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   0/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Réétiquetage du sommet 2 avec nouvelle hauteur 11
+Réétiquetage du sommet 7 avec nouvelle hauteur 1
+Réétiquetage du sommet 4 avec nouvelle hauteur 2
+Réétiquetage du sommet 5 avec nouvelle hauteur 3
+Poussé 3 unités de 4 vers 7, flot actuel : 8/8
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   13/16  2/3   7/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    5/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   8/8    0     0
+ 5   0     0     0     0    8/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    5/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   5/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Réétiquetage du sommet 4 avec nouvelle hauteur 4
+Poussé 1 unités de 7 vers 9, flot actuel : 6/6
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   13/16  2/3   7/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    3/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    5/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   8/8    0     0
+ 5   0     0     0     0    6/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    5/8
+ 7   0     0     0     0     0     0    0/3    0    0/4   6/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0
+Réétiquetage du sommet 7 avec nouvelle hauteur 2
+Réétiquetage du sommet 5 avec nouvelle hauteur 5
+Réétiquetage du sommet 4 avec nouvelle hauteur 6
+Réétiquetage du sommet 5 avec nouvelle hauteur 7
+Réétiquetage du sommet 4 avec nouvelle hauteur 8
+Réétiquetage du sommet 5 avec nouvelle hauteur 9
+Réétiquetage du sommet 4 avec nouvelle hauteur 10
+Réétiquetage du sommet 5 avec nouvelle hauteur 11
+Réétiquetage du sommet 4 avec nouvelle hauteur 12
+
+Flot maximal: 20
+Matrice de flot:
+     0     1     2     3     4     5     6     7     8     9
+ 0   0   11/16  2/3   7/8    0     0     0     0     0     0
+ 1   0     0    3/3    0    1/3   3/3   4/4    0     0     0
+ 2   0     0     0    0/7    0    5/5    0     0     0     0
+ 3   0     0     0     0     0     0     0     0    7/7    0
+ 4   0     0     0     0     0     0    1/1   8/8    0     0
+ 5   0     0     0     0    8/8    0     0     0     0     0
+ 6   0     0     0     0     0     0     0     0     0    7/8
+ 7   0     0     0     0     0     0    2/3    0    0/4   6/6
+ 8   0     0     0     0     0    0/4    0     0     0    7/8
+ 9   0     0     0     0     0     0     0     0     0     0.
 === Fin de la trace ===

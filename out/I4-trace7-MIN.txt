@@ -1,7 +1,114 @@
-Trace d'exécution pour flot à coût min - Instance 7
-Groupe I - Équipe 4 - Problème 7
-Algorithme : flot à coût min
+Trace d'exï¿½cution pour flot ï¿½ coï¿½t min - Instance 7
+Groupe I - ï¿½quipe 4 - Problï¿½me 7
+Algorithme : flot ï¿½ coï¿½t min
 Instance : 7
-=== Début de la trace ===
-... (contenu de la trace ici) ...
+=== Dï¿½but de la trace ===
+=== Initialisation ===
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 4
+Sommet 2: 6
+Sommet 3: 2
+Sommet 4: 4
+Sommet 5: 6
+     0     1     2     3     4     5
+ 0   0    0/5    0    0/8   0/5    0
+ 1   0     0    0/1    0     0    0/7
+ 2   0     0     0     0     0    0/1
+ 3   0    0/3    0     0     0    0/9
+ 4   0     0     0    0/4    0    0/1
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 4
+Sommet 2: 6
+Sommet 3: 2
+Sommet 4: 4
+Sommet 5: 7
+     0     1     2     3     4     5
+ 0   0    0/5    0    0/8   1/5    0
+ 1   0     0    0/1    0     0    0/7
+ 2   0     0     0     0     0    0/1
+ 3   0    0/3    0     0     0    0/9
+ 4   0     0     0    0/4    0    1/1
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 6
+Sommet 2: 8
+Sommet 3: 2
+Sommet 4: 4
+Sommet 5: 8
+     0     1     2     3     4     5
+ 0   0    5/5    0    0/8   1/5    0
+ 1   0     0    0/1    0     0    5/7
+ 2   0     0     0     0     0    0/1
+ 3   0    0/3    0     0     0    0/9
+ 4   0     0     0    0/4    0    1/1
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 10
+Sommet 2: 12
+Sommet 3: 6
+Sommet 4: 4
+Sommet 5: 12
+     0     1     2     3     4     5
+ 0   0    5/5    0    8/8   1/5    0
+ 1   0     0    0/1    0     0    5/7
+ 2   0     0     0     0     0    0/1
+ 3   0    0/3    0     0     0    8/9
+ 4   0     0     0    0/4    0    1/1
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 10
+Sommet 2: 12
+Sommet 3: 6
+Sommet 4: 4
+Sommet 5: 13
+     0     1     2     3     4     5
+ 0   0    5/5    0    8/8   2/5    0
+ 1   0     0    0/1    0     0    5/7
+ 2   0     0     0     0     0    0/1
+ 3   0    0/3    0     0     0    9/9
+ 4   0     0     0    1/4    0    1/1
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: 10
+Sommet 2: 12
+Sommet 3: 6
+Sommet 4: 4
+Sommet 5: 15
+     0     1     2     3     4     5
+ 0   0    5/5    0    8/8   4/5    0
+ 1   0     0    0/1    0     0    7/7
+ 2   0     0     0     0     0    0/1
+ 3   0    2/3    0     0     0    9/9
+ 4   0     0     0    3/4    0    1/1
+ 5   0     0     0     0     0     0
+Distances minimales depuis la source :
+Sommet 0: 0
+Sommet 1: inf
+Sommet 2: inf
+Sommet 3: inf
+Sommet 4: inf
+Sommet 5: inf
+     0     1     2     3     4     5
+ 0   0    5/5    0    8/8   5/5    0
+ 1   0     0    1/1    0     0    7/7
+ 2   0     0     0     0     0    1/1
+ 3   0    3/3    0     0     0    9/9
+ 4   0     0     0    4/4    0    1/1
+ 5   0     0     0     0     0     0
+CoÃ»t total: 158
+Matrice de flot:
+     0     1     2     3     4     5
+ 0   0    5/5    0    8/8   5/5    0
+ 1   0     0    1/1    0     0    7/7
+ 2   0     0     0     0     0    1/1
+ 3   0    3/3    0     0     0    9/9
+ 4   0     0     0    4/4    0    1/1
+ 5   0     0     0     0     0     0
 === Fin de la trace ===
