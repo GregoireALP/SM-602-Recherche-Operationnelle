@@ -10,6 +10,9 @@ def ford_fulkerson(n, capacities):
     
     print("=== Initialisation ===")
     
+    print("Matrice de capacité initiale:")
+    print_flow_matrix(flow_matrix, capacities)
+    
     while True:
         iteration += 1
         parent = [-1] * n
@@ -26,10 +29,10 @@ def ford_fulkerson(n, capacities):
             path.append((u, v))
             v = u
         path.reverse()  # Pour afficher de la source au puits
-        
-        print(f"\n=== Itération {iteration} ===")
-        print(f"Chemin améliorant: {' -> '.join(f'{u}->{v}' for u,v in path)}")
+
+        print(f"Chemin améliorant: {' -> '.join(f'{u}->{v}' for u,v in path)}")        
         print(f"Flot pouvant être ajouté: {path_flow}")
+        print(f"\n=== Itération {iteration} ===")
         
         # Mise à jour des flots
         v = t
@@ -45,10 +48,4 @@ def ford_fulkerson(n, capacities):
         print("\nMatrice de flot actuelle:")
         print_flow_matrix(flow_matrix, capacities)
         
-    
-    print(f"\n=== Résultat final ===")
-    print(f"Flot maximal: {max_flow}")
-    print("Matrice de flot finale:")
-    print_flow_matrix(flow_matrix, capacities)
-    
     return max_flow, flow_matrix

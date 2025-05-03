@@ -43,12 +43,8 @@ def analyze_complexity():
             push_relabel(size, capacities)
             results['PR'][size].append(time.time() - start)
             
-            # Min Cost Flow (avec flot cible = flot max / 2)
-            max_flow, _ = ford_fulkerson(size, capacities)
-            target = max_flow // 2
-            start = time.time()
-            min_cost_flow(size, capacities, costs, target)
-            results['MIN'][size].append(time.time() - start)
+            
+            # TODO : Min-Cost Flow
     
     # Affichage des résultats
     plot_results(results)

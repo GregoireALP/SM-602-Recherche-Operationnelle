@@ -4,6 +4,7 @@ from ford_fulkerson import ford_fulkerson
 from push_relabel import push_relabel
 from min_cost_flow import min_cost_flow
 from utils import print_flow_matrix
+from utils import print_cost_matrix
 
 def main():
     print("Projet de Recherche Opérationnelle - Problèmes de Flot")
@@ -12,12 +13,11 @@ def main():
         print("\nMenu principal:")
         print("1. Résoudre un problème de flot maximal")
         print("2. Résoudre un problème de flot à coût minimal")
-        print("3. Analyser la complexité")
-        print("4. Quitter")
+        print("3. Quitter")
         
         choice = input("Choix: ")
         
-        if choice == "4":
+        if choice == "3":
             break
             
         try:
@@ -36,11 +36,16 @@ def main():
                 
                 if algo_choice == "1":
                     max_flow, flow_matrix = ford_fulkerson(n, capacities)
+                    
+                    print("=== Résultat de Ford-Fulkerson ===")
                     print(f"\nFlot maximal: {max_flow}")
                     print("Matrice de flot:")
                     print_flow_matrix(flow_matrix, capacities)
+                    
                 elif algo_choice == "2":
                     max_flow, flow_matrix = push_relabel(n, capacities)
+                    
+                    print("=== Résultat de Pousser-Réétiqueter ===")
                     print(f"\nFlot maximal: {max_flow}")
                     print("Matrice de flot:")
                     print_flow_matrix(flow_matrix, capacities)
@@ -50,10 +55,17 @@ def main():
                     print("Ce problème n'a pas de coûts associés.")
                     continue
                 
-                total_cost, flow_matrix = min_cost_flow(n, capacities, costs)
-                print(f"Coût total: {total_cost}")
+                target_flow = int(input("Flot cible: "))
+                total_cost, flow_matrix = min_cost_flow(n, capacities, costs, target_flow)
+                
+                print("=== Résultat de Flot à Coût Minimal ===")
+                print(f"Coût minimal: {total_cost}")
+                
                 print("Matrice de flot:")
                 print_flow_matrix(flow_matrix, capacities)
+                
+                print("Matrice de coût:")
+                print_cost_matrix(costs)
                 
             elif choice == "3":
                 break;           
