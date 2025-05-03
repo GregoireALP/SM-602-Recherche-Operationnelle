@@ -12,11 +12,12 @@ def main():
         print("\nMenu principal:")
         print("1. Résoudre un problème de flot maximal")
         print("2. Résoudre un problème de flot à coût minimal")
-        print("3. Quitter")
+        print("3. Analyser la complexité")
+        print("4. Quitter")
         
         choice = input("Choix: ")
         
-        if choice == "3":
+        if choice == "4":
             break
             
         try:
@@ -57,6 +58,10 @@ def main():
                 print(f"Coût total: {total_cost}")
                 print("Matrice de flot:")
                 print_flow_matrix(flow_matrix, capacities)
+                
+            elif choice == "3":
+                break;           
+                
                 
         except ValueError:
             print("Entrée invalide. Veuillez réessayer.")

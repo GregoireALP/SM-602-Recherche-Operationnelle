@@ -1,0 +1,7 @@
+Trace d'exécution pour flot à coût min - Instance 9
+Groupe I - Équipe 4 - Problème 9
+Algorithme : flot à coût min
+Instance : 9
+=== Début de la trace ===
+... (contenu de la trace ici) ...
+=== Fin de la trace ===

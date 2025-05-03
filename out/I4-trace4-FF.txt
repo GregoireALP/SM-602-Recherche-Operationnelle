@@ -1,0 +1,7 @@
+Trace d'exécution pour Ford-Fulkerson - Instance 4
+Groupe I - Équipe 4 - Problème 4
+Algorithme : Ford-Fulkerson
+Instance : 4
+=== Début de la trace ===
+... (contenu de la trace ici) ...
+=== Fin de la trace ===

@@ -1,0 +1,7 @@
+Trace d'exécution pour flot à coût min - Instance 8
+Groupe I - Équipe 4 - Problème 8
+Algorithme : flot à coût min
+Instance : 8
+=== Début de la trace ===
+... (contenu de la trace ici) ...
+=== Fin de la trace ===

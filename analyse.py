@@ -1,6 +1,9 @@
 import time
 import random
 import matplotlib.pyplot as plt
+from ford_fulkerson import ford_fulkerson
+from push_relabel import push_relabel
+from min_cost_flow import min_cost_flow
 
 def generate_random_graph(n):
     capacities = [[0]*n for _ in range(n)]
@@ -70,3 +73,6 @@ def plot_results(results):
     plt.yscale('log')
     plt.savefig('complexity_analysis.png')
     plt.show()
+    
+    
+analyze_complexity()

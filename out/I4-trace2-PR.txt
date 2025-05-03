@@ -1,0 +1,7 @@
+Trace d'exécution pour pousser-réétiqueter - Instance 2
+Groupe I - Équipe 4 - Problème 2
+Algorithme : pousser-réétiqueter
+Instance : 2
+=== Début de la trace ===
+... (contenu de la trace ici) ...
+=== Fin de la trace ===
