@@ -9,6 +9,9 @@ def push_relabel(n, capacities):
     
     height[s] = n
     
+    print("=== Initialisation ===")
+    print_flow_matrix(flow, capacities)
+    
     # Pré-flot
     for v in range(n):
         if capacities[s][v] > 0:

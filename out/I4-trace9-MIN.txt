@@ -1,16 +1,6 @@
-Trace d'ex�cution pour flot � co�t min - Instance 9
-Groupe I - �quipe 4 - Probl�me 9
-Algorithme : flot � co�t min
-Instance : 9
-=== D�but de la trace ===
 === Initialisation ===
-Distances minimales depuis la source :
-Sommet 0: 0
-Sommet 1: 4
-Sommet 2: 4
-Sommet 3: 5
-Sommet 4: 7
-Sommet 5: 5
+[*] Flot cible :19
+Matrice de flot initiale :
      0     1     2     3     4     5
  0   0   0/15   0/8    0     0     0
  1   0     0   0/20   0/4  0/10    0
@@ -18,13 +8,54 @@ Sommet 5: 5
  3   0     0     0     0   0/20   0/5
  4   0     0    0/5    0     0   0/15
  5   0     0     0     0     0     0
-Distances minimales depuis la source :
+Matrice de coût initiale :
+     0     1     2     3     4     5
+ 0   0     4     4     0     0     0
+ 1   0     0     2     2     6     0
+ 2   0     0     0     1     3     0
+ 3   0     0     0     0     2     0
+ 4   0     0     3     0     0     0
+ 5   0     0     0     0     0     0
+
+=== Itération 0===
+Matrice de flot :
+     0     1     2     3     4     5
+ 0   0   0/15   0/8    0     0     0
+ 1   0     0   0/20   0/4  0/10    0
+ 2   0     0     0   0/15   0/4    0
+ 3   0     0     0     0   0/20   0/5
+ 4   0     0    0/5    0     0   0/15
+ 5   0     0     0     0     0     0
+
+Matrice de capacité:
+     0     1     2     3     4     5
+ 0   0     4     4     0     0     0
+ 1   0     0     2     2     6     0
+ 2   0     0     0     1     3     0
+ 3   0     0     0     0     2     0
+ 4   0     0     3     0     0     0
+ 5   0     0     0     0     0     0
+
+
+=== Résultat algorithme de Bellman-Ford ===
+Distance minimale depuis la source :
 Sommet 0: 0
 Sommet 1: 4
 Sommet 2: 4
 Sommet 3: 5
 Sommet 4: 7
-Sommet 5: 7
+Sommet 5: 5
+
+Prédécesseurs :
+Sommet 0: Pas de prédécesseur
+Sommet 1: Prédécesseur 0
+Sommet 2: Prédécesseur 0
+Sommet 3: Prédécesseur 2
+Sommet 4: Prédécesseur 2
+Sommet 5: Prédécesseur 3
+
+=== Itération 1===
+Matrice de flot :
      0     1     2     3     4     5
  0   0   0/15   5/8    0     0     0
  1   0     0   0/20   0/4  0/10    0
@@ -32,13 +63,36 @@ Sommet 5: 7
  3   0     0     0     0   0/20   5/5
  4   0     0    0/5    0     0   0/15
  5   0     0     0     0     0     0
-Distances minimales depuis la source :
+
+Matrice de capacité:
+     0     1     2     3     4     5
+ 0   0     4     4     0     0     0
+ 1   0     0     2     2     6     0
+ 2   0     0     0     1     3     0
+ 3   0     0     0     0     2     0
+ 4   0     0     3     0     0     0
+ 5   0     0     0     0     0     0
+
+
+=== Résultat algorithme de Bellman-Ford ===
+Distance minimale depuis la source :
 Sommet 0: 0
 Sommet 1: 4
-Sommet 2: 6
-Sommet 3: 6
-Sommet 4: 8
-Sommet 5: 8
+Sommet 2: 4
+Sommet 3: 5
+Sommet 4: 7
+Sommet 5: 7
+
+Prédécesseurs :
+Sommet 0: Pas de prédécesseur
+Sommet 1: Prédécesseur 0
+Sommet 2: Prédécesseur 0
+Sommet 3: Prédécesseur 2
+Sommet 4: Prédécesseur 2
+Sommet 5: Prédécesseur 4
+
+=== Itération 2===
+Matrice de flot :
      0     1     2     3     4     5
  0   0   0/15   8/8    0     0     0
  1   0     0   0/20   0/4  0/10    0
@@ -46,13 +100,36 @@ Sommet 5: 8
  3   0     0     0     0   0/20   5/5
  4   0     0   -3/5    0     0   3/15
  5   0     0     0     0     0     0
-Distances minimales depuis la source :
+
+Matrice de capacité:
+     0     1     2     3     4     5
+ 0   0     4     4     0     0     0
+ 1   0     0     2     2     6     0
+ 2   0     0     0     1     3     0
+ 3   0     0     0     0     2     0
+ 4   0     0     3     0     0     0
+ 5   0     0     0     0     0     0
+
+
+=== Résultat algorithme de Bellman-Ford ===
+Distance minimale depuis la source :
 Sommet 0: 0
 Sommet 1: 4
 Sommet 2: 6
-Sommet 3: 7
-Sommet 4: 9
-Sommet 5: 9
+Sommet 3: 6
+Sommet 4: 8
+Sommet 5: 8
+
+Prédécesseurs :
+Sommet 0: Pas de prédécesseur
+Sommet 1: Prédécesseur 0
+Sommet 2: Prédécesseur 1
+Sommet 3: Prédécesseur 1
+Sommet 4: Prédécesseur 3
+Sommet 5: Prédécesseur 4
+
+=== Itération 3===
+Matrice de flot :
      0     1     2     3     4     5
  0   0   4/15   8/8    0     0     0
  1   0     0   0/20   4/4  0/10    0
@@ -60,13 +137,36 @@ Sommet 5: 9
  3   0     0     0     0   4/20   5/5
  4   0     0   -3/5    0     0   7/15
  5   0     0     0     0     0     0
-Distances minimales depuis la source :
+
+Matrice de capacité:
+     0     1     2     3     4     5
+ 0   0     4     4     0     0     0
+ 1   0     0     2     2     6     0
+ 2   0     0     0     1     3     0
+ 3   0     0     0     0     2     0
+ 4   0     0     3     0     0     0
+ 5   0     0     0     0     0     0
+
+
+=== Résultat algorithme de Bellman-Ford ===
+Distance minimale depuis la source :
 Sommet 0: 0
 Sommet 1: 4
 Sommet 2: 6
 Sommet 3: 7
 Sommet 4: 9
 Sommet 5: 9
+
+Prédécesseurs :
+Sommet 0: Pas de prédécesseur
+Sommet 1: Prédécesseur 0
+Sommet 2: Prédécesseur 1
+Sommet 3: Prédécesseur 2
+Sommet 4: Prédécesseur 2
+Sommet 5: Prédécesseur 4
+
+=== Itération 4===
+Matrice de flot :
      0     1     2     3     4     5
  0   0   5/15   8/8    0     0     0
  1   0     0   1/20   4/4  0/10    0
@@ -74,27 +174,48 @@ Sommet 5: 9
  3   0     0     0     0   4/20   5/5
  4   0     0   -4/5    0     0   8/15
  5   0     0     0     0     0     0
-Distances minimales depuis la source :
+
+Matrice de capacité:
+     0     1     2     3     4     5
+ 0   0     4     4     0     0     0
+ 1   0     0     2     2     6     0
+ 2   0     0     0     1     3     0
+ 3   0     0     0     0     2     0
+ 4   0     0     3     0     0     0
+ 5   0     0     0     0     0     0
+
+
+=== Résultat algorithme de Bellman-Ford ===
+Distance minimale depuis la source :
 Sommet 0: 0
 Sommet 1: 4
 Sommet 2: 6
 Sommet 3: 7
 Sommet 4: 9
-Sommet 5: inf
-     0     1     2     3     4     5
- 0   0   12/15  8/8    0     0     0
- 1   0     0   8/20   4/4  0/10    0
- 2   0     0     0   12/15  4/4    0
- 3   0     0     0     0   11/20  5/5
- 4   0     0   -4/5    0     0   15/15
- 5   0     0     0     0     0     0
-Coût total: 150
+Sommet 5: 9
+
+Prédécesseurs :
+Sommet 0: Pas de prédécesseur
+Sommet 1: Prédécesseur 0
+Sommet 2: Prédécesseur 1
+Sommet 3: Prédécesseur 2
+Sommet 4: Prédécesseur 3
+Sommet 5: Prédécesseur 4
+=== Résultat de Flot à Coût Minimal ===
+Coût minimal: 141
 Matrice de flot:
      0     1     2     3     4     5
- 0   0   12/15  8/8    0     0     0
- 1   0     0   8/20   4/4  0/10    0
- 2   0     0     0   12/15  4/4    0
- 3   0     0     0     0   11/20  5/5
- 4   0     0   -4/5    0     0   15/15
+ 0   0   11/15  8/8    0     0     0
+ 1   0     0   7/20   4/4  0/10    0
+ 2   0     0     0   11/15  4/4    0
+ 3   0     0     0     0   10/20  5/5
+ 4   0     0   -4/5    0     0   14/15
  5   0     0     0     0     0     0
-=== Fin de la trace ===
+Matrice de coût:
+     0     1     2     3     4     5
+ 0   0     4     4     0     0     0
+ 1   0     0     2     2     6     0
+ 2   0     0     0     1     3     0
+ 3   0     0     0     0     2     0
+ 4   0     0     3     0     0     0
+ 5   0     0     0     0     0     0

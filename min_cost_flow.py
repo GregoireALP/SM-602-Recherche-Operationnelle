@@ -8,19 +8,27 @@ def min_cost_flow(n, capacities, costs, target_flow):
     total_flow = 0
     total_cost = 0
     iteration = 0
+    print("=== Initialisation ===")
+    print("[*] Flot cible :" + str(target_flow))
+    print("Matrice de flot initiale :")
+    print_flow_matrix(flow, capacities)
+    print("Matrice de coût initiale :")
+    print_cost_matrix(costs)
     
     while total_flow < target_flow:
         
         print("\n=== Itération " + str(iteration) + "===")
         
         # Étape 1: Trouver le chemin de coût minimal avec Bellman-Ford
-        print("Matrice de coût :")
-        print_cost_matrix(costs)
+        print("Matrice de flot :")
+        print_flow_matrix(flow, capacities)
         
         print("")
         
-        print("Matrice de capacité :")
-        print_flow_matrix(flow, capacities)
+        print("Matrice de capacité:")
+        print_cost_matrix(costs)
+        
+        print("")
         
         distance, parent = bellman_ford(n, capacities, costs, flow, 0)
         
@@ -49,7 +57,7 @@ def min_cost_flow(n, capacities, costs, target_flow):
         
         total_flow += path_flow
         
-        interation += 1
+        iteration += 1
     
     return total_cost, flow
 
@@ -79,7 +87,6 @@ def bellman_ford(n, capacities, costs, flow, source):
                     distance[v] = distance[u] + costs[u][v]
                     parent[v] = u
 
-    print("=== Résultats de Bellman-Ford ===")
     print_bellman_ford_matrice(distance, parent, n)
     
     return distance, parent

@@ -55,7 +55,9 @@ def main():
                     print("Ce problème n'a pas de coûts associés.")
                     continue
                 
-                target_flow = int(input("Flot cible: "))
+                max_flow, flow_matrix = ford_fulkerson(n, capacities)
+                target_flow = max_flow - 1
+            
                 total_cost, flow_matrix = min_cost_flow(n, capacities, costs, target_flow)
                 
                 print("=== Résultat de Flot à Coût Minimal ===")

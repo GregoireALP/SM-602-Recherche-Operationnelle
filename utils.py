@@ -30,19 +30,20 @@ def print_flow_matrix(flow_matrix, capacities):
        
 def print_bellman_ford_matrice(distance, parent, n):
     """
-    Affiche la matrice de Bellman-Ford avec les distances et les prédécesseurs.
-    
-    Arguments :
-    - distance : liste, distances minimales depuis la source.
-    - parent : liste, prédécesseurs pour chaque sommet.
-    - n : int, nombre de sommets.
+    Affiche la matrice de Bellman-Ford avec pour chaque itération la distance minimale et le prédécesseur sous forme de tableau.
     """
-    print("Matrice de Bellman-Ford:")
-    print("Sommet | Distance | Prédécesseur")
-    print("-" * 30)
+    print("\n=== Résultat algorithme de Bellman-Ford ===")
     
+    print("Distance minimale depuis la source :")
     for i in range(n):
-        print(f"{i:6} | {distance[i]:8} | {parent[i]}")
+        print(f"Sommet {i}: {distance[i]}")
+    print("\nPrédécesseurs :")
+    for i in range(n):
+        if parent[i] != -1:
+            print(f"Sommet {i}: Prédécesseur {parent[i]}")
+        else:
+            print(f"Sommet {i}: Pas de prédécesseur")
+
         
 def print_cost_matrix(cost_matrix):
     """
@@ -111,48 +112,3 @@ def bfs(residual_graph, n, s, t, parent):
     
     print("[*] Aucun chemin augmentant trouvé")
     return False
-
-
-def generer_fichiers_trace(groupe, equipe):
-    """
-    Génère les fichiers de trace pour les algorithmes selon les consignes de nommage.
-    Les 5 premiers fichiers sont pour FF et PR, les 4 derniers pour MIN.
-    
-    Arguments :
-    - groupe : str, le groupe (ex : "I")
-    - equipe : int, le numéro de l'équipe (ex : 4)
-    - probleme : int, le numéro du problème (ex : 5)
-    """
-    # Algorithmes et leurs suffixes
-    algorithmes = {
-        "Ford-Fulkerson": "FF",
-        "pousser-réétiqueter": "PR",
-        "flot à coût min": "MIN"
-    }
-    
-    # Générer les fichiers pour les 10 instances
-    for i in range(1, 11):  # 10 fichiers
-        if i <= 5:  # Les 5 premiers fichiers pour FF et PR
-            algos_a_generer = {k: v for k, v in algorithmes.items() if v in ["FF", "PR"]}
-        elif i >= 7:  # Les 4 derniers fichiers pour MIN
-            algos_a_generer = {k: v for k, v in algorithmes.items() if v == "MIN"}
-        else:
-            continue  # Ignorer le fichier 6 (aucun algo à générer)
-        
-        for algo, suffixe in algos_a_generer.items():
-            # Construire le nom du fichier
-            nom_fichier = f"{groupe}{equipe}-trace{i}-{suffixe}.txt"
-            
-            # Créer et écrire dans le fichier
-            with open("./out/" + nom_fichier, "w") as fichier:
-                fichier.write(f"Trace d'exécution pour {algo} - Instance {i}\n")
-                fichier.write(f"Groupe {groupe} - Équipe {equipe} - Problème {i}\n")
-                fichier.write(f"Algorithme : {algo}\n")
-                fichier.write(f"Instance : {i}\n")
-                fichier.write("=== Début de la trace ===\n")
-                
-                fichier.write("=== Fin de la trace ===\n")
-    
-    print("Fichiers de trace générés avec succès.")
-    
-    

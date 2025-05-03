@@ -1,50 +1,18 @@
-Trace d'ex�cution pour pousser-r��tiqueter - Instance 3
-Groupe I - �quipe 4 - Probl�me 3
-Algorithme : pousser-r��tiqueter
-Instance : 3
-=== D�but de la trace ===
 === Initialisation ===
-Réétiquetage du sommet 1 avec nouvelle hauteur 1
-Poussé 4 unités de 1 vers 2, flot actuel : 4/4
      0     1     2     3     4     5     6     7
- 0   0    5/5   8/8   4/4    0     0     0     0
- 1   0     0    4/4    0    0/7    0     0     0
+ 0   0    0/5   0/8   0/4    0     0     0     0
+ 1   0     0    0/4    0    0/7    0     0     0
  2   0     0     0     0     0    0/7   0/8    0
  3   0     0    0/7    0     0     0    0/4    0
  4   0     0     0     0     0    0/6    0     0
  5   0     0     0     0     0     0     0    0/7
  6   0     0     0     0     0     0     0   0/10
  7   0     0     0     0     0     0     0     0
-Réétiquetage du sommet 2 avec nouvelle hauteur 1
+=== Poussées ===
+Poussé 4 unités de 1 vers 2, flot actuel : 4/4
 Poussé 7 unités de 2 vers 5, flot actuel : 7/7
-     0     1     2     3     4     5     6     7
- 0   0    5/5   8/8   4/4    0     0     0     0
- 1   0     0    4/4    0    1/7    0     0     0
- 2   0     0     0     0     0    7/7   0/8    0
- 3   0     0    0/7    0     0     0    0/4    0
- 4   0     0     0     0     0    0/6    0     0
- 5   0     0     0     0     0     0     0    0/7
- 6   0     0     0     0     0     0     0   0/10
- 7   0     0     0     0     0     0     0     0
-Réétiquetage du sommet 3 avec nouvelle hauteur 1
-Réétiquetage du sommet 4 avec nouvelle hauteur 1
-Réétiquetage du sommet 5 avec nouvelle hauteur 1
 Poussé 7 unités de 5 vers 7, flot actuel : 7/7
-     0     1     2     3     4     5     6     7
- 0   0    5/5   8/8   4/4    0     0     0     0
- 1   0     0    4/4    0    1/7    0     0     0
- 2   0     0     0     0     0    7/7   5/8    0
- 3   0     0    0/7    0     0     0    4/4    0
- 4   0     0     0     0     0    1/6    0     0
- 5   0     0     0     0     0     0     0    7/7
- 6   0     0     0     0     0     0     0   0/10
- 7   0     0     0     0     0     0     0     0
-Réétiquetage du sommet 5 avec nouvelle hauteur 2
-Réétiquetage du sommet 6 avec nouvelle hauteur 1
-Réétiquetage du sommet 2 avec nouvelle hauteur 2
-Réétiquetage du sommet 1 avec nouvelle hauteur 2
-Réétiquetage du sommet 4 avec nouvelle hauteur 3
-Réétiquetage du sommet 1 avec nouvelle hauteur 3
+=== Résultat de Pousser-Réétiqueter ===
 
 Flot maximal: 17
 Matrice de flot:
@@ -57,5 +25,3 @@ Matrice de flot:
  5   0     0     0     0     0     0     0    7/7
  6   0     0     0     0     0     0     0   10/10
  7   0     0     0     0     0     0     0     0
-
-=== Fin de la trace ===
